@@ -1,14 +1,14 @@
 # Tutorial Description
 
-## Course Title: 
+## Title: 
 
 "Introduction to Reusable Python"
 
-## Course Abstract:
+## Abstract:
 
-Learn how to organize your python code into reusable units such as containers, functions, modules, and packages; and then use of pip and conda, to install and reuse locally, and to distribute and reuse globally.
+Learn how to organize python code into reusable units such as containers, functions, modules, and packages; and how to reuse those units, locally and globally, by installing and distributing them using pip and conda.
 
-## Course Description
+## Description
 
 This tutorial introduces the basics of organizing and sharing your python code for reuse through a series of student exercises that build on each other. The content is intentionally limited to the core aspects of python scope, modules, packaging, pip, and conda needed to get you started writing reusable code and contributing to the shared ecosystem of reusable scientific python software.
 
