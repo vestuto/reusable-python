@@ -41,8 +41,10 @@ Additional reading on the topics covered in the tutorial.
 ## Conda Packaging
 
 * [Building conda packages from scratch](https://conda.io/docs/build_tutorials/pkgs2.html)
-* [Conda Forge](https://conda-forge.github.io)
 * [Community Power Conda Packaging](https://www.continuum.io/blog/developer-blog/community-conda-forge)
+* [Conda-Forge Docs](http://conda-forge.github.io/docs/)
+* [Conda-Forge Repository](https://anaconda.org/conda-forge/repo)
+* [Continuum Conda Repositories](https://repo.continuum.io/pkgs/)
 
 
 
