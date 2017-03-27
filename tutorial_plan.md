@@ -42,13 +42,14 @@ The course is organized into 4 parts, with roughly one hour to be spent on each 
 * conda search for finding packages, available versions
 * conda channels, local package installs
 
-### Part 4: Conda Build
+### Part 4: Conda Build ***(optional)***
+
+*In the case that another proposal for a more advanced tutorial on conda-build is accepted, this present section on Conda Build could be optionally (1) removed with more emphasis spent on previous sections outlined above (2) kept minimal, limited to pure python packages.  The two proposed talks could then potentially serve as a "Part 1, Part 2" pairing, with the present one being "Part 1" which would introduce reusable code and the use of conda, and then "Part 2" in another tutorial covering conda-build and conda-forge in much greater detail at an advanced level.* 
 
 * why build a conda package?
-* conda package distributions, Anaconda, conda-forge
+* conda package distributions, Anaconda
 * write a conda recipe: meta.yaml, build.sh, bld.dat
 * conda build a pure python package
 * conda install your local conda package
 * importing your conda installed package
 * upload your conda recipe and package to conda-forge
-
