@@ -28,7 +28,7 @@ Prerequisite Skills:
 
 * Basic computer use
 * Basic text editor use
-* Basic to Intermediate terminal/command-prompt use
+* Intermediate terminal/command-prompt use
 * Basic python use
 
 ### Detailed List
@@ -44,7 +44,7 @@ Prerequisite Skills:
 * Basic text editor use: 
     * locate and open a text editor, e.g. [sublime text](https://www.sublimetext.com)
     * use a text edit to create, modify, and save files to known locations 
-* Basic to Intermediate terminal use:
+* Intermediate terminal use:
     * any: Linux, Mac, or Windows
     * open a terminal or command-prompt
     * use a terminal to list current working directory
@@ -52,6 +52,7 @@ Prerequisite Skills:
     * use a terminal to change current directory
     * use a terminal to execute/run a script
     * use a terminal to change file permissions
+    * setting and changing environment variables
 * Basic python use:
     * assign a value to a variable name
     * call a function, passing input parameters, storing return values
