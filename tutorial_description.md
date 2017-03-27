@@ -1,20 +1,24 @@
-# Tutorial Proposal
+# Tutorial Description
 
 ## Course Title: 
 
 "Introduction to Reusable Python"
 
-A tutorial on how to organize and distribute python code in reusable units, including building packages and using conda.
-
 ## Course Abstract:
 
-How to organize your python code into reusable units such as containers, functions, modules, and packages; and then with the use of pip and conda, how to share it locally and globally, so that it can be reused by others.
+Learn how to organize your python code into reusable units such as containers, functions, modules, and packages; and then use of pip and conda, to install and reuse locally, and to distribute and reuse globally.
 
-## Instructor Biography
+## Course Description
 
-### Public Biography
+This tutorial introduces the basics of organizing and sharing your python code for reuse through a series of student exercises that build on each other. The content is intentionally limited to the core aspects of python scope, modules, packaging, pip, and conda needed to get you started writing reusable code and contributing to the shared ecosystem of reusable scientific python software.
 
-**Jason Vestuto** is a scientist and python developer working with the Space and Geophysics Laboratory at the University of Texas in Austin. He uses the scientific python stack daily to develop software tools and perform analysis of GNSS data. He holds degrees in both physics and science education. He has taught science, math, and coding at high schools, colleges, universities, and has trained scientific python and conda at large private companies and national science labs. 
+We start with a python terminal session, save the history to a script, and organize that script using containers and functions. Then we create a python module that we import or run as a script, explore some aspects of scope, create a python package, and write a setup.py to install the package. Next, we introduce conda for managing environments and packages. We go on to write a conda recipe for our python package, and use conda-build to create a conda package from our recipe. Finally we install our conda package locally and upload it to conda-forge.
+
+## Intended Audience
+
+Intermediate 
+
+*If you are a beginner in python, but very comfortable with use of the terminal (Linux or Mac) or command prompt (Windows), including setting and changing environment variables, you are encouraged to attend.*
 
 ## Prerequisite Skills:
 
@@ -54,17 +58,8 @@ Prerequisite Skills:
     * define a simple function using def and return
     * create a dictionary, and inspect its contents
 
-## Intended Audience
 
-Intermediate 
-
-*If you are a beginner in python, but very comfortable with use of the terminal (Linux or Mac) or command prompt (Windows), you are encouraged to attend.*
+## Instructor Biography
 
 
-## Course Description
-
-This tutorial introduces the basics of organizing and sharing your python code for reuse through a series of student exercises that build on each other. 
-
-We start with code written in a python terminal, turn it into a script, and organize that script using containers and functions. Then we create a python module that we import or run as a script, expand that into a python package, and write and use a setup.py to install the package. Next, we introduce conda for managing environments and packages, learn to write a conda recipe for our python packages, and conda-build to create a conda package. Lastly we install our conda package and upload it to conda-forge.
-
-This tutorial is intentionally limited to only the core aspects of python scope, packaging, pip, and conda that best illustrate the most import concepts and machinery needed to get you started using and contributing to the shared ecosystem of reusable scientific python tools from which we all benefit.
+**Jason Vestuto** is a scientist and python developer working with the Space and Geophysics Laboratory at the University of Texas in Austin. He uses the scientific python stack daily to develop software tools and perform analysis of GNSS data. He holds degrees in both physics and science education. He has taught science, math, and coding at high schools, colleges, universities, and has trained scientific python and conda at large private companies and national science labs. 
