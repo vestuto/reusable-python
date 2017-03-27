@@ -65,6 +65,6 @@ Intermediate
 
 This tutorial introduces the basics of organizing and sharing your python code for reuse through a series of student exercises that build on each other. 
 
-We start with code written in a python terminal, turn it into a module to import, use that as part of creating a python package, installing it with pip and conda, create a conda package, and finally uploaded the packages to PyPI and conda-forge.
+We start with code written in a python terminal, turn it into a script, and organize that script using containers and functions. Then we create a python module that we import or run as a script, expand that into a python package, and write and use a setup.py to install the package. Next, we introduce conda for managing environments and packages, learn to write a conda recipe for our python packages, and conda-build to create a conda package. Lastly we install our conda package and upload it to conda-forge.
 
-This tutorial is intentionally limited to only the core aspects of python scope, packaging, pip, and conda that best illustrate the most import concepts and machinery needed to get you started using and contributing to the shard ecosystem of reusable scientific python tools from which we all benefit.
+This tutorial is intentionally limited to only the core aspects of python scope, packaging, pip, and conda that best illustrate the most import concepts and machinery needed to get you started using and contributing to the shared ecosystem of reusable scientific python tools from which we all benefit.
