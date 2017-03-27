@@ -5,7 +5,7 @@ Before the tutorial you should...
 * download and install the trial version of text editor [sublime text](https://www.sublimetext.com/3)
 * download an [Anaconda3 installer file](https://www.continuum.io/downloads) for your system.
 * [Install Anaconda](https://docs.continuum.io/anaconda/install) under your user account home directory
-* Download the tutorial materials from [github.com/vestuto/reusable-python](github.com/vestuto/reusable-python), either as a ZIP or using git. Unzip if needed.
+* Download the tutorial materials from [https://github.com/vestuto/reusable-python](https://github.com/vestuto/reusable-python), either as a ZIP or using git. Unzip if needed.
 * Locate the `check_version.py` script found in the downloaded course content.
 * Open a terminal or command-prompt, navigate to the directory containing the `check_version.py` script, and run it as follows: `python ./check_version.py` 
 * download but do NOT install the [Miniconda3 installer file](https://conda.io/miniconda.html) for Python3 (~25 MB).
