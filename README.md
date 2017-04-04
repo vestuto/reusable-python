@@ -13,13 +13,13 @@ A tutorial on how to organize python code into reusable units such as scripts, c
 
 * [Python & Shells](./content/shells.md)
 * [Python Scripts](./content/python_scripts.md)
-* Python Modules
+* [Python Modules](./content/python_modules.md)
 * [Python Packages](./content/python_packages.md)
 
 ## Part 2: Conda
 
-* [Introduction to Conda](./content/conda_intro.md)
-* [Conda Environments](./content/conda_envs.md)
-* [Conda Packages](./content/conda_packages.md)
-* [Conda Channels](./content/conda_channels.md)
+* [What is Conda?](./content/conda_intro.md)
+* [Packages and Environments](./content/conda_envs.md)
+* [Package Building](./content/conda_packages.md)
+* [Package Distribution](./content/conda_channels.md)
 
