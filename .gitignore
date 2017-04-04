@@ -1,0 +1,9 @@
+# tmp files
+.DS_Store
+*~
+.idea
+.ipynb_checkpoints
+__pycache__
+*.pyc
+*.egg
+*.egg-info
