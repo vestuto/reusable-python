@@ -4,6 +4,8 @@ Python scripts are one of the first units of reusable code that someone new to p
 
 # Table of Contents
 
+* [First Script](#First-Script)
+* [Shell to Script](#Shell-to-Script)
 * [Scripts vs. Modules](#Scripts-vs.-Modules)
 	* [Example Script 1](#Example-Script-1)
 	* [Example Script 2](#Example-Script-2)
@@ -20,17 +22,98 @@ Python scripts are one of the first units of reusable code that someone new to p
 	* [Subprocess](#Subprocess)
 
 
-# What is a script?
+# Syene Script
 
-A python script is simple a plain text file saved to disk with a name the ends with the ".py" extention.
+In about the year 230 BCE, [Eratosthenes estimated the radius of the Earth](http://outreach.as.utexas.edu/marykay/assignments/eratos1.html) to an accuracy within 5% of [the modern value](https://nssdc.gsfc.nasa.gov/planetary/factsheet/). He read (perhaps from a differnet kind of "script") that on the summer solstice, the sun was reflected from the water at the bottom of a deep well in Syene. The Sun was directly overhead. On the same day in Alexandria, he noticed a tall obelisk cast a shadow at an angle of about 7 or 8 degrees from vertical. So he walked from Alexandria to Syene, and counted his steps along the way.
+
+Enter the following lines into the ipython terminal.
+Then at the end use the `save` command to write all this to a file called `syene_script.py`
+
+```python
+from __future__ import print_function
+import math
+
+# measure lengths shadow & stick, get angle
+stick = 1.8
+shadow = 0.23
+rad2deg = 180.0/math.pi
+angle = math.atan(shadow/stick)*rad2deg
+print("shdow angle = ", angle)
+
+# walk from Alexandria to Syene
+step = 2  # meters
+counts = 395000
+travel = step * counts 
+print("travel distance = ", travel)
+
+# assume earth is a sphere
+# use ratio of angles = ratio of lengths
+circumference = travel * (360 / angle)
+radius = circumference / (2.0 * math.pi)
+print("estimated earth radius = ", radius)
+
+# compute error
+known_value = 6378137 
+error = 100 * math.fabs(known_value - radius) / known_value
+print("known value = ", known_value)
+print("error % = ", error)
 
 ```
-my_script.py
+
+Open a text editor, copy/paste the above lines into it, and save it as `syene_script.py`
+
+--
+
+# Shell to Script
+
+You can use the ipython shell to save your command line history to a file:
+
+```python
+In [1]: import math
+In [2]: pi = math.pi
+In [3]: deg2rad = pi/180.0
+In [4]: zero = math.cos(90.0 * deg2rad)
+In [5]: save radian.py 1-4
+
+The following commands were written to file `radian.py`:
+
+import math
+pi = math.pi
+deg2rad = pi/180.0
+zero = math.cos(90.0 * deg2rad)
+```
+
+--
+
+You can also load file contents from a file on disk into an ipython shell:
+
+```
+In [1]: %load radian.py
+
+    ...: import math
+    ...: pi = math.pi
+    ...: deg2rad = pi/180.0
+    ...: zero = math.cos(90.0 * deg2rad)
+    ...: 
+
+In [2]: print(pi)
+3.141592653589793
+```
+### Exercise: Perform the steps above
+
+You should have a file `radian.py` after you are done. Use a text editor to confirm the existence and contents of that file.
+
+--
+
+# What is a script?
+
+A python script is any plain-text file saved to disk with a name the ends with the ".py" extention.
+
+```
+./src/my_script.py
 ```
 
 They can be created with any text editor or other tool capable of saving to plain text.
-
-They con contain 0 lines or 1000 lines.
 
 ```python
 # This is a script. It's not a very good one.
@@ -39,13 +122,13 @@ msg = "Hello World"
 print(msg)
 ```
 
-You can run this script from the shell:
+### Exercise
 
-```bash
-$ python ./my_script.py
-```
+Use `%load ./src/my_script.py` to view the contents of the script in the ipython shell.
 
-In this example, there 5 parts, so it's not the simplest, but close to it.
+--
+
+In this example, there 4 lines, so it's not the simplest, but close to it.
 
 
 1. `# This is a script. ` - reuse help: in this case a single comment line, starting with a `#`, is ignored by the python interpreter but very valuable to the human interpreter trying to reuse the script later.
@@ -53,43 +136,63 @@ In this example, there 5 parts, so it's not the simplest, but close to it.
 3. `msg = "Hello World"` - reuse data: this creates a string object in memory with the value "Hello World" and then "binds" the name `msg` to it, so that it can be used and reused later in the script.
 4. `print(msg)` - reuse methods: this is reusing a function code block built into python itself, together with our data.
 
+--
+
+You can run this script from the system shell:
+
+```bash
+$ python ./src/my_script.py
+```
+
+You can also run this script from the ipython shell:
+
+```bash
+In [1]: %run ./src/my_script.py
+```
+--
+
 # Scripts vs. Modules
 
 ## Example Script 1
 
-Any file with python in it can be run as a script
+Any file with python in it can be run as a script. Create a file with the following content:
 
-
-```python
-# Open text editor and create new file in CWD
-script_name = "script_01.py"
-script_fullname = os.path.join(cwd, script_name)
-print("Open a text editor and create a new file here: \n" + script_fullname)
 ```
-
-Create a file with the following content:
-```python
 print("Hello World")
 ```
 
 Use a text editor, or run the following command to create script_01.py:
 
+```python
+#  write a script from ipython shell
+In [42]: print("Hello World")
+save script_01.py 42
+```
 
 ```python
+# write a script from a jupyter notebook cell
 %%file script_01.py
 print("Hello World")
 ```
 
+Now run the script and observe the behavior...
+
+You can run it from your system shell (e.g. bash or cmd.exe)
 
 ```python
-# run script
-!python3 script_01.py
+$ python script_01.py
 ```
 
+You can also run it from within the ipython shell using the `!` character to pass commands to the system shell:
 
 ```python
-# import script
-import script_01
+In [45]: !python script_01.py
+```
+
+Or use the special `run` keyword available within ipython:
+
+```python
+In [46]: run ./script_01.py
 ```
 
 ## Example Script 2
@@ -113,11 +216,11 @@ print("Inside of script: after call to func()")
 
 ```
 
-Use a text editor, or run the following command to create script_02.py:
+Use a text editor to create script_02.py:
 
 
 ```python
-%%file script_02.py
+# script_02.py
 print("Inside of script: before def func()")
 def func(thing):
     print("Inside of script: inside def func()")
@@ -128,14 +231,17 @@ print("Inside of script: after call to func()")
 
 ```
 
+Then run the script from either the system shell or the ipython shell:
+
 
 ```python
 # run script
-!python3 script_02.py
+In [46]: !python3 script_02.py
 
 # Notice the order of the print() statements!!!
 ```
 
+You can also `import` a script!
 
 ```python
 # import script
@@ -243,7 +349,7 @@ import sys
 
 
 ```python
-# argv for the notebook looks a bit weird
+# argv for the jupyter notebook looks a bit weird
 
 print( 'Number of Arguments:', len(sys.argv) )
 print( 'Argument Values:', str(sys.argv) )
@@ -272,7 +378,8 @@ Use a text editor to screat the file and enter the text above, or simple execute
 
 
 ```python
-%%file script_arg_test01.py
+# if in a jupyter notebook, use the %%file to write
+# %%file script_arg_test01.py
 import sys
 print( 'Number of Arguments:', len(sys.argv) )
 print( 'Argument Values:' )
@@ -293,6 +400,7 @@ python3 script_arg_test01.py
 The module `argparse` provides much more powerful input arg capabilities
 
 Create a file called `script_argparse.py` with the following contents:
+
 * Include the top level docstring
 * Using at least one function, in this case `my_print()`
 * Encapsulating the argparse set-up in a function
@@ -303,21 +411,21 @@ Create a file called `script_argparse.py` with the following contents:
 import argparse
     
 """
-    This is the docstring for a module named 'tutorial'.
-    Note that this file has to be in your current dir or
-    in a path listed in sys.path
+This is the docstring for a module named 'tutorial'.
+Note that this file has to be in your current dir or
+in a path listed in sys.path
 """
 
 def my_print(msg="This is a script"):
     """
-    This is the docstring for the my_print() method in the tutorial.py module
-
-    This will appear when you call help(my_print) or use the my_print? in ipython
+    This is the docstring for the my_print() method
+    This will appear when you call help(my_print) or 
+    if you type my_print? in ipython
     """
     print(msg)
     return None
 
-def build_parser():
+def get_inputs():
     """Build input arg parser"""
    
     # Create defaults and help strings
@@ -332,7 +440,10 @@ def build_parser():
     # add args to parser object
     parser.add_argument('-d', '--days', dest='num_days',  help=help_arg_d, default=default_arg_d, type=int)
     parser.add_argument('-p', '--path', dest='file_path', help=help_arg_p, default=default_arg_p, type=str)
-    return parser
+
+    args  = parser.parse_args()
+
+    return args
 
 
 def main():
@@ -341,12 +452,11 @@ def main():
     """
 
     # Build parser and parse input args
-    parser = build_parser()
-    args   = parser.parse_args()
+    inputs = get_inputs()
     
     # Unpack the args (optional)
-    num_days  = args.num_days
-    file_path = args.file_path
+    num_days  = inputs.num_days
+    file_path = inputs.file_path
 
     # Use input args
     my_msg = "Number of days = " + str(num_days) + "\n"
@@ -357,6 +467,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 ```
 
 Now test the script:
