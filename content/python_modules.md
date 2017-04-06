@@ -270,6 +270,40 @@ print(type(myrandom._inst))  # Remember, myrandom._inst is an instance of class 
 print(myrandom.uniform == myrandom._inst.uniform)
 print(__name__)
 ```
+
+
+--
+
+# Import a Module
+
+All code in a module is executed on import
+* def statements only create functions, not call them
+* if you a module to act like both a library and a script, write a main, and wrap it in a test for `__name__`
+
+
+```python
+if __name__ == "__main__":
+    print("What's in a name?")
+```
+
+## sys.path
+
+Python searches the paths contained in `sys.path` to find anything you try to import
+
+
+```python
+import sys
+sys.path
+```
+
+Installing a python module can be as simple as copying the file into a path like
+
+>  '/Users/jvestuto/anaconda/lib/python3.5/site-packages' 
+
+or using an install tool that does this for you.
+
+*Note: Most installs are NOT that simple! Dear Team Conda, we love you!*
+
 --
 
 # Execute a Module

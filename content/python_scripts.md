@@ -4,15 +4,12 @@ Python scripts are one of the first units of reusable code that someone new to p
 
 # Table of Contents
 
-* [First Script](#First-Script)
+* [Syene Script](#First-Script)
 * [Shell to Script](#Shell-to-Script)
-* [Scripts vs. Modules](#Scripts-vs.-Modules)
+* [Examples](#Examples)
 	* [Example Script 1](#Example-Script-1)
 	* [Example Script 2](#Example-Script-2)
 	* [Example Script 3](#Example-Script-3)
-* [Module Basics](#Module-Basics)
-	* [import](#import)
-	* [sys.path](#sys.path)
 * [Inputs](#Script-Inputs)
 	* [Input Args and sys.argv](#Input-Args-and-sys.argv)
 	* [Input Args and argparse](#Input-Args-and-argparse)
@@ -151,7 +148,7 @@ In [1]: %run ./src/my_script.py
 ```
 --
 
-# Scripts vs. Modules
+# Examples
 
 ## Example Script 1
 
@@ -304,37 +301,6 @@ import script_03
 # Notice that NOTHING is printed upon import! Yay!! We did it!
 ```
 
-# Module Basics
-
-## import
-
-All code in a module is executed on import
-* def statements only create functions, not call them
-* if you a module to act like both a library and a script, write a main, and wrap it in a test for `__name__`
-
-
-```python
-if __name__ == "__main__":
-    print("What's in a name?")
-```
-
-## sys.path
-
-Python searches the paths contained in `sys.path` to find anything you try to import
-
-
-```python
-import sys
-sys.path
-```
-
-Installing a python module can be as simple as copying the file into a path like
-
->  '/Users/jvestuto/anaconda/lib/python3.5/site-packages' 
-
-or using an install tool that does this for you.
-
-*Note: Most installs are NOT that simple! Dear Team Conda, we love you!*
 
 # Inputs
 
