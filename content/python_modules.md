@@ -17,6 +17,15 @@ Herein we will see how to transform **scripts** into **modules** and prepare a *
 
 * A **package** is a collection of python **modules** that can be *imported* as a whole using a package manager. A package need not provide executable scripts, but should provide some testing capabilities.
 
+--
+
+# Exercise: Tidy up Script
+
+* Use a text editor to open the script `./src/syene_script.py`
+* Add function definitions, one for each code block marked by a comment line.
+* Add a `main()` function that calls the others, and reproduces the behavioe of `syrene_script.py`
+* Save as `syene_module.py`
+
 
 --
 
