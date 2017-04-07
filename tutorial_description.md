@@ -20,6 +20,8 @@ Intermediate
 
 *If you are a beginner in python, but very comfortable with use of the terminal (Linux or Mac) or command prompt (Windows), including setting and changing environment variables, you are encouraged to attend.*
 
+*This tutorial really is intended for scientists and analysts, not for experienced python developers or dev-ops folks. If you have already have had PRs merged into master on projects like numpy, pandas, or conda, you probably don't need this tutorial!*
+
 ## Prerequisite Skills:
 
 ### Summary List
@@ -63,4 +65,4 @@ Prerequisite Skills:
 ## Instructor Biography
 
 
-**Jason Vestuto** is a scientist and python developer working with the Space and Geophysics Laboratory at the University of Texas in Austin. He uses the scientific python stack daily to develop software tools and perform analysis of GNSS data. He holds degrees in both physics and science education. He has taught science, math, and coding at high schools, colleges, universities, and has trained scientific python and conda at large private companies and national science labs. 
+**Jason Vestuto** is a scientist and python developer working with the Space and Geophysics Laboratory at the University of Texas in Austin. He uses the scientific python stack daily to develop software tools and perform analysis of GNSS data. He holds degrees in both physics and science education. He has taught science, math, and coding at high schools, colleges, universities, and as a former Python Trainer with Continuum Analytics, has trained scientific Python and conda at large private companies and national science labs. 
