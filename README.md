@@ -2,7 +2,7 @@
 
 ### For Scientists and Analysts
 
-A tutorial on how to organize python code into reusable units such as scripts, containers, functions, modules, and packages; and how to reuse those units, locally and globally, by installing and distributing them using pip and conda.
+A tutorial on how to organize Python code into reusable units such as scripts, containers, functions, modules, and packages; and how to reuse those units, locally and globally, by installing and distributing them using pip and conda.
 
 ## Motivation
 
@@ -14,7 +14,7 @@ The scope of viability of such code is often severely limited in time, space, pl
 
 ### Solution
 
-This tutorial is intended to demonstrate common ways to organize and reuse python code with the goal of transforming "users of" the SciPy stack into "potential contributers to" the SciPy stack, capable of organizing their own code into reusable units for more locally reproducible results while reducing the time spent fighting with disorganized and unmaintainable piles of scripts. The hope beyond that is that this might enable more people to become contributors to the SciPy ecosystem of more globally reusable tools.
+This tutorial is intended to demonstrate common ways to organize and reuse Python code with the goal of transforming "users of" the SciPy stack into "potential contributers to" the SciPy stack, capable of organizing their own code into reusable units for more locally reproducible results while reducing the time spent fighting with disorganized and unmaintainable piles of scripts. The hope beyond that is that this might enable more people to become contributors to the SciPy ecosystem of more globally reusable tools.
 
 ## Preparation
 
@@ -45,3 +45,10 @@ This tutorial is intended to demonstrate common ways to organize and reuse pytho
 * [Building Conda Packages](./content/conda_packages.md)
 * [Distributing Packages with Conda Channels](./content/conda_channels.md)
 
+## Material Coverage
+
+There is a bit more material here than can be completed within a 4 hour window allocated for a SciPy tutorial session. Depending on the informal "Entry Survey" taken when we start, and experience of the audience, we may skip some early sections (e.g. Shells and Scripts) so that we can spend more time with later material and the student exercises, or alternatively, spend more time on the earlier material and leave the later sections as "Homework" to be done after the conference.
+
+## Thank You
+
+I would like to acknowledge [Continuum Analytics](https://www.continuum.io/training) who graciously permitted me to use their internal training material in development of this tutorial.
