@@ -1,14 +1,10 @@
-print( "Start of script." )
-# This is an example script you might
-# write to test some ideas
-# It is not well organized
-# It is intended only to be run from the shell
+print( "Start of script_constants_v1.py" )
 
 import math
 
 # Assumed values for E and PI
-E = 2.7182899999999
-PI = 3.14159
+E1 = 2.7182899999999
+PI1 = 3.14159
 
 # Compute PI
 PI2 = 4.0*math.atan(1.0)
@@ -21,7 +17,7 @@ for n in range(num_terms):
 E2 = sum
 
 # Report results
-print( "Error in E calculation is ", abs(E2-E))
-print( "Error in E calculation is ", abs(PI2-PI))
+print( "Error in E2 - E1 = ", math.fabs(E2-E1))
+print( "Error in P2 - P1 = ", math.fabs(PI2-PI1))
 
-print( "End of script." )
+print( "End of script_constants_v1.py" )
