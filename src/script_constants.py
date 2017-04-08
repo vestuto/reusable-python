@@ -1,4 +1,4 @@
-print( "Start of script_constants_v1.py" )
+print( "Start of script_constants.py" )
 
 import math
 
@@ -20,4 +20,4 @@ E2 = sum
 print( "Error in E2 - E1 = ", math.fabs(E2-E1))
 print( "Error in P2 - P1 = ", math.fabs(PI2-PI1))
 
-print( "End of script_constants_v1.py" )
+print( "End of script_constants.py" )
