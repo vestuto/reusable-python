@@ -1,4 +1,4 @@
-print( "Start of module-like section." )
+print( "Start of module_constants.py" )
 
 import math
 
@@ -20,11 +20,7 @@ def compute_error(val1, val2, name):
     print( message )
     return error
 
-print( "End of module-like section." )
-
-if __name__ == "__main__":	
-    print( "Start of script." )
-
+def compute_all():
     E1 = 2.7182899999999
     PI1 = 3.14159
 
@@ -34,4 +30,5 @@ if __name__ == "__main__":
     E_error = compute_error(E1, E2, "E")
     PI_error = compute_error(PI1, PI2, "PI")
 
-    print( "End of script." )
+print( "End of module_constants.py" )
+
